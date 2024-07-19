@@ -1,0 +1,69 @@
+{
+  "14": {
+    "inputs": {
+      "height": 1024,
+      "width": 1024,
+      "seed": 677722294990622,
+      "dtype": "bf16",
+      "stage_a_tiled": "true",
+      "stage_b_steps": 10,
+      "stage_b_cfg": 1.1,
+      "stage_c_steps": 20,
+      "stage_c_cfg": 4,
+      "controlnet_weight": 0.7000000000000001,
+      "prompt": "",
+      "model": [
+        "16",
+        0
+      ],
+      "controlnet_image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "UltraPixelProcess",
+    "_meta": {
+      "title": "UltraPixel Process"
+    }
+  },
+  "16": {
+    "inputs": {
+      "ultrapixel": "ultrapixel_t2i.safetensors",
+      "stage_a": "stage_a.safetensors",
+      "stage_b": "stage_b_lite_bf16.safetensors",
+      "stage_c": "stage_c_bf16.safetensors",
+      "effnet": "effnet_encoder.safetensors",
+      "previewer": "previewer.safetensors",
+      "controlnet": "controlnet/canny.safetensors",
+      "ultrapixel_directory": "default",
+      "stablecascade_directory": "default"
+    },
+    "class_type": "UltraPixelLoad",
+    "_meta": {
+      "title": "UltraPixel Load"
+    }
+  },
+  "17": {
+    "inputs": {
+      "filename_prefix": "UltraPixel",
+      "images": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "20": {
+    "inputs": {
+      "image": "example.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  }
+}

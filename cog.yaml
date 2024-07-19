@@ -26,6 +26,16 @@ build:
     - kornia>=0.7.1
     - websocket-client==1.6.3
 
+    - numpy>=1.23.5
+    - insightface>=0.7.3
+    - matplotlib>=3.7.4
+    - webdataset>=0.2.79
+    - wandb>=0.16.2
+    - munch>=4.0.0
+    - onnx2torch>=1.5.13
+    - warmup-scheduler @ git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git
+    - torchtools @ git+https://github.com/pabloppp/pytorch-tools
+
     # layerdiffuse
     - diffusers>=0.25.0
 

@@ -632,6 +632,7 @@
     "Kolors"
   ],
   "ULTRAPIXEL": [
-    "ultrapixel_t2i.safetensors"
+    "ultrapixel_bundle",
+    "ultrapixel_huggingface_bundle"
   ]
 }
